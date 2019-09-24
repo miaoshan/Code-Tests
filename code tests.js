@@ -102,3 +102,20 @@ class SmallestIntegerFinder {
 // Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 // Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
 // spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
+
+function spinWords(str) {
+    var array = str.split(" ");
+    var result = "";
+    for (var i = 0; i < array.length; i++) {
+        var word = array[i];
+        if (word.length < 5) {
+            result = result + word + " ";
+        } else {
+            for (var m = word.length - 1; m >= 0; m--) {
+                result = result + word[m];
+            }
+            result = result + " ";
+        }
+    }
+    return result.slice(0, result.length - 1);
+}
