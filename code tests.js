@@ -119,3 +119,23 @@ function spinWords(str) {
     }
     return result.slice(0, result.length - 1);
 }
+
+
+// Write a function to remove all duplicate words from a string, leaving only single (first) words entries.
+// Example:
+// Input:
+// 'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+// Output:
+// 'alpha beta gamma delta'
+
+function removeDuplicates(str){
+    const words= str.split("")
+
+    const newWords=[]
+    words.forEach(function(word){
+        if(!newWords.includes(word)){
+            newWords.push(word)
+        }
+    });
+    return newWords.join(",")
+}
