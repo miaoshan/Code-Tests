@@ -128,14 +128,27 @@ function spinWords(str) {
 // Output:
 // 'alpha beta gamma delta'
 
-function removeDuplicates(str){
-    const words= str.split("")
+function removeDuplicates(str) {
+    const words = str.split("")
 
-    const newWords=[]
-    words.forEach(function(word){
-        if(!newWords.includes(word)){
+    const newWords = []
+    words.forEach(function (word) {
+        if (!newWords.includes(word)) {
             newWords.push(word)
         }
     });
     return newWords.join(",")
+}
+
+
+// whether or not a string is a palindrome string. Palnidrom means the string will
+// the same from left to right or right to left. Example: level
+
+function Palnidrom(str){
+    if(str == str.split('').reverse().join('')){
+        return true
+    }
+    else{
+        return false
+    }
 }
