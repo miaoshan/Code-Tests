@@ -152,3 +152,15 @@ function Palnidrom(str){
         return false
     }
 }
+
+// given a string of words, return the length of the shortest word(s).
+// String will never be empty and you do not need to account for different data types.
+
+function findShort(str){
+
+    let array = str.split(" ")
+    let arraySmallToLarge = array.sort((a, b) => a.length - b.length)
+    let smallestWordLength = arraySmallToLarge[0].length
+    
+     return smallestWordLength;
+  }
